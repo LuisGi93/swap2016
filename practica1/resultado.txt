@@ -1,0 +1,13 @@
+Last login: Mon Mar  7 21:50:39 2016
+l@SWAPbuntu1:~$ apache2 -v
+Server version: Apache/2.4.7 (Ubuntu)
+Server built:   Jul 24 2015 17:25:11
+l@SWAPbuntu1:~$ ps aux | grep apache
+root      1034  0.0  1.9 276268 22140 ?        Ss   21:50   0:00 /usr/sbin/apache2 -k start
+www-data  1051  0.0  0.6 276292  7352 ?        S    21:50   0:00 /usr/sbin/apache2 -k start
+www-data  1052  0.0  0.6 276292  7352 ?        S    21:50   0:00 /usr/sbin/apache2 -k start
+www-data  1053  0.0  0.6 276292  7352 ?        S    21:50   0:00 /usr/sbin/apache2 -k start
+www-data  1054  0.0  0.6 276292  7352 ?        S    21:50   0:00 /usr/sbin/apache2 -k start
+www-data  1055  0.0  0.6 276292  7352 ?        S    21:50   0:00 /usr/sbin/apache2 -k start
+l         1320  0.0  0.1  11748  2204 pts/0    S+   21:54   0:00 grep --color=auto apache
+
