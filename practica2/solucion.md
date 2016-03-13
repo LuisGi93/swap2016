@@ -14,6 +14,7 @@ En la imagen podemos ver en primer lugar la creación de un directorio y tres ar
 #Configurando ssh para acceso sin contraseñas modo root.
 
 En primer lugar en la máquina secundaria creamos un par de claves público-privada usando el comando ssh-keygen (notose que ejecutamos como usuario root los comandos, esto es para que despues sea el usuario root el que pueda loguearse en la máquina remota):
+
 ![img](https://github.com/LuisGi93/swap2016/blob/master/practica2/imagenes/ssh1.png)
 
 
@@ -58,7 +59,7 @@ Como podemos observar en la imagen de más arriba el fichero crontab se divice e
 
 ![img](https://github.com/LuisGi93/swap2016/blob/master/practica2/imagenes/cron1.png "crontab modificado")
 
-Y ahora  esperamos :prey: :
+Y ahora  esperamos :pray: :
 
 ![img](https://github.com/LuisGi93/swap2016/blob/master/practica2/imagenes/cron2.png "prueba crontab funciona")
 
