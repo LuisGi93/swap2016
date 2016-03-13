@@ -13,7 +13,7 @@ En la imagen podemos ver en primer lugar la creación de un directorio y tres ar
 
 #Configurando ssh para acceso sin contraseñas modo root.
 
-En primer lugar en la máquina secundaria creamos un par de claves público-privada usando el comando ssh-keygen:
+En primer lugar en la máquina secundaria creamos un par de claves público-privada usando el comando ssh-keygen (notose que ejecutamos como usuario root los comandos, esto es para que despues sea el usuario root el que pueda loguearse en la máquina remota):
 ![img](https://github.com/LuisGi93/swap2016/blob/master/practica2/imagenes/ssh1.png)
 
 
@@ -28,3 +28,38 @@ Comprobamos que podemos entrar como root sin introducir la contraseña:
 
 ![img](https://github.com/LuisGi93/swap2016/blob/master/practica2/imagenes/ssh3.png)
 
+
+
+#Clonando carpeta /var/www usando rsync
+
+En primer lugar instalamos rsync en nuestro sistema con apt, después en la maquina secundaria ejecutamos el comando:
+
+rsync -avz -e ssh root@192.168.56.103:/var/www/ /var/www/
+
+![img](https://github.com/LuisGi93/swap2016/blob/master/practica2/imagenes/rsync1.png)
+
+Tras la ejecución de esta orden podemos comprobar que el contenido en la máquina del directorio /var/www/ es identico al contenido de ese mismo directorio en la máquina 1.
+
+Para perfeccionar el clonado podriamos haber ejecutado la misma orden de más arriba pero con la opcion --delete:
+
+rsync -avz --delete -e ssh root@192.168.56.103:/var/www/ /var/www/
+
+
+Lo que habría dado lugar al mismo proceso de clonado pero se habrían borrado aquellos ficheros de la máquina secundaria que se hubieran borrado en la máquina 1.
+
+
+#Manteniendo actualizado el directorio /var/www entre las dos máquinas.
+
+Cron es un viejo conocido de las prácticas de las diversas asignaturas de la etsiit su especialidad es ejecutar tareas que previamente hemos configurado para que se ejecuten de manera periódica. En este momento vamos a utilizar cron para mantener identico el directorio /var/www entre las dos máquinas para ello tenemos que editar el fichero /etc/crontab
+
+![img](https://github.com/LuisGi93/swap2016/blob/master/practica2/imagenes/cron0.png "crontab antes de nada")
+
+Como podemos observar en la imagen de más arriba el fichero crontab se divice en una serie de columnas separadas por espacios en blanco, cada una de estas columnas le especifica a cron cuando tiene que ejecutar la tarea que podemos observar en cron. Para la práctica nos piden ejecutar una tarea que mantenga actualizado el directorio /var/www entre las dos máquinas y que esta tarea se ejecute cada hora:
+
+![img](https://github.com/LuisGi93/swap2016/blob/master/practica2/imagenes/cron1.png "crontab modificado")
+
+Y ahora  esperamos :prey: :
+
+![img](https://github.com/LuisGi93/swap2016/blob/master/practica2/imagenes/cron2.png "prueba crontab funciona")
+
+Como podemos observar el resultado es satisfactorio y con la tarea que hemos programado el directorio /var/www se actualizará cada hora.
