@@ -1,0 +1,9 @@
+
+<pregunta>
+  <enunciado>Cuántas horas está caido a la semana un servidor web si está replicado en otro servidor y tiene una disponinibilidad del 99.996%</enunciado>
+  <opcionA>1</opcionA>
+  <opcionB>2</opcionB>
+  <opcionC>3</opcionC>
+  <opcionD>4</opcionD>
+  <solucion>C</solucion>
+</pregunta>
