@@ -1,0 +1,27 @@
+<pregunta>
+  <enunciado>el texto del enunciado</enunciado>
+  <opcionA>primera opcion</opcionA>
+  <opcionB>segunda opcion</opcionB>
+  <opcionC>tercera opcion</opcionC>
+  <opcionD>cuarta opcion</opcionD>
+  <solucion>C</solucion>
+</pregunta>
+
+<pregunta>
+  <enunciado>Cuales son las principales ventajas de una granja web</enunciado>
+  <opcionA>Es facil y rápida de montar.</opcionA>
+  <opcionB>Una vez montada no requiere mayor inversión de tiempo.</opcionB>
+  <opcionC>Sumamente eficiente para sitios web con poco tráfico. </opcionC>
+  <opcionD>Es escalable y con alta disponibilidad.</opcionD>
+  <solucion>C</solucion>
+</pregunta>
+
+
+<pregunta>
+  <enunciado>Es recomendable montar una granja web cuando:</enunciado>
+  <opcionA>Quiero montar un servidor de correo para la familia.</opcionA>
+  <opcionB>Mi cliente me dice que necesita urgentemente un servidor de correo para dentro de dos dias.</opcionB>
+  <opcionC>El numero de accesos a mi sitio web crece exponencialmente.</opcionC>
+  <opcionD>Tienes poco tiempo  y presupuesto para montar un sitio web funcional.</opcionD>
+  <solucion>C</solucion>
+</pregunta>
