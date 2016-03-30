@@ -34,3 +34,4 @@ server{
 }
 
 Siendo los ips 192.168.56.103 y 192.56.104 las ips de los dos servidores web a los cuales vamos a balancear la carga que les llega.
+![img](https://github.com/LuisGi93/swap2016/blob/master/practica3/imagenes/nginx_balanceador.png)
