@@ -1,4 +1,5 @@
 # Pŕactica 3 SWAP
+
 Luis Gil Guijarro 3ºC
 
 ## Balanceador de carga utilizando Nginx.
@@ -34,5 +35,53 @@ server{
 	}
 }
 ```
-Siendo los ips 192.168.56.103 y 192.56.104 las ips de los dos servidores web a los cuales vamos a balancear la carga que les llega.
-![img](https://github.com/LuisGi93/swap2016/blob/master/practica3/imagenes/nginx_balanceador.png)
+Siendo los ips 192.168.56.103 y 192.56.104 las IPs de los dos servidores web a los cuales vamos a balancear la carga que les llega y siendo 192.168.59.105 la IP de nuestro balanceador.
+![img](https://github.com/LuisGi93/swap2016/blob/omaster/practica3/imagenes/nginx_balanceador.png)
+
+Probamos que el balanceador funciona haciendo ```curl 192.168.59.105``` :
+
+![img](https://github.com/LuisGi93/swap2016/blob/omaster/practica3/imagenes/nginx_probando.png)
+
+
+Como podemos ver la carga se distribuye estilo round-robin, por turnos. Además vamos a probar algoritmo de balanceo por ponderación para ello modificamos en nuestro archivo default.conf y el bloque upstream queda:
+
+```
+upstream apaches {
+	server 192.168.56.103 weight=2;
+	server 192.168.56.104 weight=1;
+}
+```
+De tal manera que la máquina 1 tiene el doble de peso. Weight nos indica el peso de carga que le asignamos a esa IP. Probamos:
+
+![img](https://github.com/LuisGi93/swap2016/blob/omaster/practica3/imagenes/nginx_peso.png)
+
+Como podemos observar de seis llamadas que se han hecho en cuatro de ellas ha respondido el servidor primero y en dos de ellas el servidor segundo.
+
+
+
+#haproxy
+
+Tras haber instaldo haproxy para configurarlo como balanceador modificamos el fichero /etc/haproxy/haproxy.cfg y lo dejamos asi:
+```
+global
+        daemon
+        maxconn 256
+
+defaults
+        mode http
+        contimeout 4000
+        clitimeout 42000
+        srvtimeout 43000
+
+frontend http-in
+        bind *:80
+        default_backend servers
+
+backend servers
+        server          m1 192.168.56.103 maxconn 32
+        server          m2 192.168.56.104 maxconn 32
+```
+Tras para nginx e iniciar haproxy probamos a hacer un curl a la IP del balanceador:
+![img](https://github.com/LuisGi93/swap2016/blob/omaster/practica3/imagenes/haproxy_balanceador.png)
+
+Como podemos ver haproxy balancea correctamente el tráfico.
