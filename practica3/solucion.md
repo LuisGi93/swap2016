@@ -36,11 +36,11 @@ server{
 }
 ```
 Siendo los IPs 192.168.56.103 y 192.56.104 las IPs de los dos servidores web a los cuales vamos a balancear la carga que les llega y siendo 192.168.59.105 la IP de nuestro balanceador.
-![img](https://github.com/LuisGi93/swap2016/blob/omaster/practica3/imagenes/nginx_balanceador.png)
+![img](https://github.com/LuisGi93/swap2016/blob/master/practica3/imagenes/nginx_balanceador.png)
 
 Probamos que el balanceador funciona haciendo ```curl 192.168.59.105``` :
 
-![img](https://github.com/LuisGi93/swap2016/blob/omaster/practica3/imagenes/nginx_probando.png)
+![img](https://github.com/LuisGi93/swap2016/blob/master/practica3/imagenes/nginx_probando.png)
 
 
 Como podemos ver la carga se distribuye estilo round-robin, por turnos. Además vamos a probar algoritmo de balanceo por ponderación para ello modificamos en nuestro archivo default.conf y el bloque upstream queda:
@@ -53,7 +53,7 @@ upstream apaches {
 ```
 De tal manera que la máquina 1 tiene el doble de peso. Weight nos indica el peso de carga que le asignamos a esa IP. Probamos:
 
-![img](https://github.com/LuisGi93/swap2016/blob/omaster/practica3/imagenes/nginx_peso.png)
+![img](https://github.com/LuisGi93/swap2016/blob/master/practica3/imagenes/nginx_peso.png)
 
 Como podemos observar de seis llamadas que se han hecho en cuatro de ellas ha respondido el servidor primero y en dos de ellas el servidor segundo.
 
@@ -82,7 +82,7 @@ backend servers
         server          m2 192.168.56.104 maxconn 32
 ```
 Tras para nginx e iniciar haproxy probamos a hacer un curl a la IP del balanceador:
-![img](https://github.com/LuisGi93/swap2016/blob/omaster/practica3/imagenes/haproxy_balanceador.png)
+![img](https://github.com/LuisGi93/swap2016/blob/master/practica3/imagenes/haproxy_balanceador.png)
 
 Como podemos ver haproxy balancea correctamente el tráfico.
 
@@ -95,7 +95,7 @@ backend servers
 ```
 Probamos esta configuración, la máquina uno tendría el doble de peso:
 
-![img](https://github.com/LuisGi93/swap2016/blob/omaster/practica3/imagenes/haproxy_peso.png)
+![img](https://github.com/LuisGi93/swap2016/blob/master/practica3/imagenes/haproxy_peso.png)
 
 El balanceo de carga en haproxy parece menos mecánico que en nginx, en nginx si hacias tres peticiones en dos de ellas seguidas respondía el servidor 1 y en la siguiente el 2 mientras que en haproxy si haces cuatro peticones en lugar de responder 1-1-2-1-1 hace 1-1-1-2.
 
