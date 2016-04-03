@@ -85,3 +85,17 @@ Tras para nginx e iniciar haproxy probamos a hacer un curl a la IP del balancead
 ![img](https://github.com/LuisGi93/swap2016/blob/omaster/practica3/imagenes/haproxy_balanceador.png)
 
 Como podemos ver haproxy balancea correctamente el tráfico.
+
+Para distribuir la carga entre los servidores en haproxy según su peso modificamos la parte backend servers en haproxy.cfg tal que quede así si deseamos que el primer servidor reciba el doble de carga:
+
+```
+backend servers
+        server          m1 192.168.56.103 maxconn 32 weight 2
+        server          m2 192.168.56.104 maxconn 32 weight 1
+```
+Probamos esta configuración, la máquina uno tendría el doble de peso:
+
+![img](https://github.com/LuisGi93/swap2016/blob/omaster/practica3/imagenes/haproxy_peso.png)
+
+El balanceo de carga en haproxy parece menos mecánico que en nginx, en nginx si hacias tres peticiones en dos de ellas seguidas respondía el servidor 1 y en la siguiente el 2 mientras que en haproxy si haces cuatro peticones en lugar de responder 1-1-2-1-1 hace 1-1-1-2.
+
