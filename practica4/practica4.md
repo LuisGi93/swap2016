@@ -19,11 +19,11 @@ archivo para realizar la prueba
 </body>
 </html>
 
-´´´
+```
 
 ![img](https://github.com/LuisGi93/swap2016/blob/master/practica4/imagenes/test.png)
 
-´´´
+```
 
 Comprobamos que todo va correcto haciendo un par de peticiones a nuestro balanceador:
 
