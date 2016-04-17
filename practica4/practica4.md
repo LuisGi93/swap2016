@@ -21,8 +21,9 @@ archivo para realizar la prueba
 
 ´´´
 
-![img](https://github.com/LuisGi93/swap2016/blob/master/practica3/imagenes/nginx_balanceador.png)
+![img](https://github.com/LuisGi93/swap2016/blob/master/practica4/imagenes/test.png)
 
+´´´
 
 Comprobamos que todo va correcto haciendo un par de peticiones a nuestro balanceador:
 
