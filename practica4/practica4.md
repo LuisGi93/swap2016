@@ -9,7 +9,7 @@ Luis Gil Guijarro 3ºA
 Antes de empezar la práctica hemos creado dos archivos html llamados prueba.html
 en /var/www/html con el siguiente contenido
 
-´´´
+```
 <html>
 <head>
 <title> prueba</title>
@@ -23,7 +23,7 @@ archivo para realizar la prueba
 
 ![img](https://github.com/LuisGi93/swap2016/blob/master/practica4/imagenes/test.png)
 
-```
+
 
 Comprobamos que todo va correcto haciendo un par de peticiones a nuestro balanceador:
 
