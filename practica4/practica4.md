@@ -21,11 +21,12 @@ archivo para realizar la prueba
 
 ```
 
+Comprobamos que todo va correcto haciendo un par de peticiones a nuestro balanceador:
+
 ![img](https://github.com/LuisGi93/swap2016/blob/master/practica4/imagenes/test.png)
 
 
 
-Comprobamos que todo va correcto haciendo un par de peticiones a nuestro balanceador:
 
 
 ##Monitorización de la carga utilizando ab.
