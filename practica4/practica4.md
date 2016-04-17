@@ -67,7 +67,7 @@ La tabla obtenida de las mediciones la podemos observar más abajo:
 A continuación mostramos los gráficos obtenidos de realizar la medía sobre las 10 mediciones para el servidor solo, para balanceador nginx y para balanceador haproxy. TAmbién realizamos una gŕafica con las desviaciones típicas:
 
 
-![img](https://github.com/LuisGi93/swap2016/blob/master/practica4/imagenes/siegett_media.png)
+![img](https://github.com/LuisGi93/swap2016/blob/master/practica4/imagenes/siegers_media.png)
 
 ![img](https://github.com/LuisGi93/swap2016/blob/master/practica4/imagenes/siegers_dt.png)
 
