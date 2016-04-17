@@ -30,6 +30,28 @@ Comprobamos que todo va correcto haciendo un par de peticiones a nuestro balance
 
 
 ##Monitorización de la carga utilizando ab.
+
+Vamos a utilizar Apache Benchmark para comprobar el funcionamiento en primer lugar de uno de los  servidores Apache solo sin utilizar granja web para balancear el tráfico, para ello ejecuto 10 veces el comando:
+
+```
+ab -n 1000 -c 10 192.168.59.103
+
+```
+A partir de los datos obtenidos saco la media y la desviación típica.
+
+En la tabla de más abajo se puede observar el resultado de haber ejecutado el comando ab anterior 10 veces para el servidor solo otras 10 utilizando Nginx como balanceador y otras 10 utilizando Haproxy. Los datos tomados de la salida producida por ab han sido el tiempo total que le ha llevado a realizar el test y el tiempo medio de peticiones por segundo. Todo esto ha sido recopilado en la tabla que podemos ver a continuación:
+
+
+![img](https://github.com/LuisGi93/swap2016/blob/master/practica4/imagenes/abtabla.png)
+
+Y a continuación en una gráfica utilizando las medias:
+
+
+![img](https://github.com/LuisGi93/swap2016/blob/master/practica4/imagenes/abtt.png)
+
+![img](https://github.com/LuisGi93/swap2016/blob/master/practica4/imagenes/abrs.png)
+
+
 ## Balanceador de carga utilizando Nginx.
 
 La instalación de Nginx se ha realizado utilizando apt:  apt-get install Nginx.
