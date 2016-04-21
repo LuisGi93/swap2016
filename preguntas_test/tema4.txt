@@ -1,0 +1,18 @@
+
+<pregunta> Que es la Virtual IP.</pregunta>
+  <opcionA>IP perteneciente a una máquina virtual.</opcionA>
+  <opcionB>IP no estática que se asigna a un ordenador al conectarse a una red.</opcionB>
+  <opcionC>IP que ven los usuarios desde fuera del sistema cuando piden un servicio al sistema. </opcionC>
+  <opcionD>Ninguna de las anteriores es correcta.</opcionD>
+  <solucion>C</solucion>
+</pregunta>
+
+
+<pregunta>
+  <enunciado> Si en una granja web el balanceador utiliza un algoritmo de balanceo basado den ponderación:</enunciado>
+  <opcionA>La máquina más potente siempre es la que se va a llevar la mayor parte de las peticiones.</opcionA>
+<opcionB>Cada máquina recibirá un % del número de conexiones dependiendo del peso que se le haya asignado. </opcionB>
+  <opcionC>Cada máquina recibirá un % del número de conextiones dependiendo del número de conexiones que ha servido.</opcionC>
+  <opcionD>Ninguna de las anteriores</opcionD>
+  <solucion>B</solucion>
+</pregunta>

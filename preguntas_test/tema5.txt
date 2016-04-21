@@ -1,0 +1,20 @@
+
+<pregunta>
+  <enunciado> Sobre el  jumboframe </enunciado>
+  <opcionA>Solución dada al verse aumentado el peso de las webs. Aumenta por 8 el payload lo que implica que se tarda 8 veces menos en servirse la página.</opcionA>
+  
+  <opcionB>Solución dada al verse reducido el peso de las webs. Reduce por 8 el payload lo que implica que se tarda 8 veces menos en servirse la página.</opcionB>
+  <opcionC>Solución dada al verse aumentado el peso de las webs. Reduce por 8 el payload lo que implica que se tarda 8 veces más en servirse la página.</opcionC>
+  <opcionD><Solución dada al verse reducido el peso de las webs. Reduce por 8 el payload lo que implica que se tarda 8 veces más en servirse la página./opcionD>
+  <solucion>A</solucion>
+</pregunta>
+
+
+<pregunta>
+  <enunciado>El total de conexiones concurrentes es la métrica más importante para:</enunciado>
+  <opcionA>Tienda web </opcionA>
+  <opcionB>FTP/Streaming </opcionB>
+  <opcionC>UDP</opcionC>
+  <opcionD>Ninguna de las anteriores</opcionD>
+  <solucion>A</solucion>
+</pregunta>
