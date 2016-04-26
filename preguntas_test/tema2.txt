@@ -5,7 +5,7 @@
   <opcionB>2</opcionB>
   <opcionC>3</opcionC>
   <opcionD>4</opcionD>
-  <solucion>1</solucion>
+  <solucion>A</solucion>
 </pregunta>
 
 

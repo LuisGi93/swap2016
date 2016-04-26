@@ -1,11 +1,3 @@
-<pregunta>
-  <enunciado>el texto del enunciado</enunciado>
-  <opcionA>primera opcion</opcionA>
-  <opcionB>segunda opcion</opcionB>
-  <opcionC>tercera opcion</opcionC>
-  <opcionD>cuarta opcion</opcionD>
-  <solucion>C</solucion>
-</pregunta>
 
 <pregunta>
   <enunciado>Cuales son las principales ventajas de una granja web</enunciado>
@@ -13,7 +5,7 @@
   <opcionB>Una vez montada no requiere mayor inversión de tiempo.</opcionB>
   <opcionC>Sumamente eficiente para sitios web con poco tráfico. </opcionC>
   <opcionD>Es escalable y con alta disponibilidad.</opcionD>
-  <solucion>C</solucion>
+  <solucion>D</solucion>
 </pregunta>
 
 
