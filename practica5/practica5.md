@@ -119,6 +119,7 @@ Ahora el objetivo es que lo insertado en la máquina1 se replique en la 2 y vice
 
 
 Una vez ejecutada la sentencia "CHANGE MASTER TO MASTER_HOST.." en la máquina1 ejecutamos la sentencia "START SLAVE;" e insertamos datos en ambas máquinas para comprobar que funciona correctamente el MASTER TO MASTERT:
+
 ![img](https://github.com/LuisGi93/swap2016/blob/master/practica5/capturas/transpadomanualsql9.png)
 
 Primero insertamos mon en la máquina1, comprobamos que se ha insertado en la máquina2. Todo correcto insertamos "mok" y comprobamos en la máquina1 que se replica en la BD de la máquina1. Esta imagen constata el correcto funcionamiento de la replicación de BD  MASTER to MASTER.
