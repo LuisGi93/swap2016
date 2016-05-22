@@ -1,0 +1,20 @@
+
+<pregunta>
+  <enunciado> La misión principal de un cortafuegos:  </enunciado>
+  <opcionA>Permite controlar que tráfico puede entrar al servidor y cual no.</opcionA>
+  
+  <opcionB>Permite controlar que usuarios entran al servidor y quienes no.</opcionB>
+  <opcionC>Permite controlar el fuego en caso de incendio para que no se propague al resto de servidores.</opcionC>
+  <opcionD>Permite todo lo anterior.</opcionD>
+  <solucion>A</solucion>
+</pregunta>
+
+
+<pregunta>
+  <enunciado>La regla de iptables: iptables -A INPUT -s 5.6.7.8  -j ACCEPT</enunciado>
+  <opcionA> Permite todo el tráfico entrante a nuestra ip si nuestra ip fuera 5.6.7.8</opcionA>
+  <opcionB>Permite todo el tráfico saliente a nuestra ip si nuestra ip fuera 5.6.7.8</opcionB>
+  <opcionC>Permite todo el tráfico entrante desde la ip 5.6.7.8</opcionC>
+  <opcionD>Tanto la opción A como la C son correctas.</opcionD>
+  <solucion>D</solucion>
+</pregunta>

@@ -5,7 +5,7 @@
   
   <opcionB>Solución dada al verse reducido el peso de las webs. Reduce por 8 el payload lo que implica que se tarda 8 veces menos en servirse la página.</opcionB>
   <opcionC>Solución dada al verse aumentado el peso de las webs. Reduce por 8 el payload lo que implica que se tarda 8 veces más en servirse la página.</opcionC>
-  <opcionD><Solución dada al verse reducido el peso de las webs. Reduce por 8 el payload lo que implica que se tarda 8 veces más en servirse la página./opcionD>
+  <opcionD><Solución dada al verse reducido el peso de las webs. Reduce por 8 el payload lo que implica que se tarda 8 veces más en servirse la página.</opcionD>
   <solucion>A</solucion>
 </pregunta>
 
